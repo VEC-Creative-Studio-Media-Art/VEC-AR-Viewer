@@ -18,6 +18,42 @@
         .info { position: absolute; bottom: 24px; left: 16px; z-index: 10; }
         .info h1 { font-size: 1.1rem; margin: 0; }
         .info p { font-size: 0.8rem; color: #9a9aa2; margin: 4px 0 0; }
+        
+        .site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+}
+.site-footer a {
+  display: flex;
+  align-items: center;
+}
+.site-footer img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+.site-footer .footer-credit {
+  font-size: 0.75rem;
+  color: var(--text-dim, #9a9aa2);
+  text-align: center;
+  flex: 1;
+}
+
+/* Móvil: apilado y centrado */
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-footer .footer-credit {
+    order: 3;
+  }
+}
       </style>
     </head>
   <body>
@@ -40,5 +76,14 @@
         <p>Modelo 3D de Delfin Chileno a escala</p>
       </div>
     </model-viewer>
+
+  <footer class="site-footer">
+  <a href="https://vecestudio.com/" target="_blank" rel="noopener">
+    <img src="../../assets/logo_vec.png" alt="VEC Estudio Creativo">
+  </a>
+  <p class="footer-credit">Hecho con model-viewer · WebXR / Scene Viewer / Quick Look</p>
+  <img src="../../assets/logo_museo.png" alt="Museo de la Ballena y Ciencias del Mar">
+  </footer>
+
   </body>
 </html>
