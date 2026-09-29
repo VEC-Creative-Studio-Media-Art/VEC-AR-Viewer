@@ -21,16 +21,48 @@ model-viewer {
   background-color: #000;
 }
 
-/* Header con logos (versión compacta, sin título centrado) */
+/* Barra superior limpia */
 .header-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: center;
   padding: 14px 20px;
+  min-height: 60px;
 }
-.header-bar a { display: flex; align-items: center; }
-.header-bar img { height: 44px; width: auto; object-fit: contain; }
+
+/* Botón para regresar a la galería */
+.back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 9px 18px;
+
+  background: #1a1a1f;
+  color: #f5f5f7;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back:hover {
+  background: #24242a;
+  border-color: rgba(255,255,255,0.18);
+}
+
+.back:active {
+  transform: scale(0.97);
+}
 
 /* Footer con logos */
 .site-footer {
