@@ -64,6 +64,46 @@ model-viewer {
   transform: scale(0.97);
 }
 
+/* Botón AR */
+button[slot="ar-button"] {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 18px;
+
+  background-color: #4f8cff;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 20px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+button[slot="ar-button"]:hover {
+  background-color: #6098ff;
+}
+
+button[slot="ar-button"]:active {
+  transform: scale(0.96);
+}
+
 /* Footer con logos */
 .site-footer {
   display: flex;
